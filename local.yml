@@ -5,7 +5,7 @@
   tasks:
     - include_tasks: playbooks/snap-vscode.yml
     - include_tasks: playbooks/snap-sublime_text.yml
-    #- include_tasks: playbooks/docker.yml
+    - include_tasks: playbooks/docker.yml
     - include_tasks: playbooks/php8.0.yml
     - include_tasks: playbooks/nodejs-14.yml
     - include_tasks: playbooks/git.yml
