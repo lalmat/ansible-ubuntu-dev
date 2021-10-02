@@ -1,0 +1,3 @@
+- name: VUEJS - Install Vue CLI
+  become_user: "{{ansible_env.SUDO_USER}}"
+  shell: npm install -g @vue/cli @vue/cli-service-global
