@@ -10,4 +10,3 @@
     - include_tasks: playbooks/nodejs-14.yml
     - include_tasks: playbooks/git.yml
     - include_tasks: playbooks/laravel.yml
-    - include_tasks: playbooks/vuejs.yml
