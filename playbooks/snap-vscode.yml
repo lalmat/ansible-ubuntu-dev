@@ -1,0 +1,5 @@
+- name: VISUAL STUDIO CODE - Snap Install
+  become: true
+  snap:
+    name: code
+    classic: yes

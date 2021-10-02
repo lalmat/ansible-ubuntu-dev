@@ -1,0 +1,5 @@
+- name: SUBLIME TEXT - Snap Install
+  become: true
+  snap:
+    name: sublime-text
+    classic: yes
