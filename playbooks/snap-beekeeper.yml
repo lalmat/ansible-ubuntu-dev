@@ -1,0 +1,5 @@
+- name: BEEKEEPER STUDIO - Snap Install
+  become: true
+  snap:
+    name: beekeeper-studio
+    classic: yes
