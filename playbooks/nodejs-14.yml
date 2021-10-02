@@ -8,3 +8,32 @@
     name: nodejs
     state: latest
     update_cache: yes
+
+- name: NPM - Local global packages directory
+  become_user: "{{ansible_env.SUDO_USER}}"
+  shell: mkdir "/home/{{ansible_env.SUDO_USER}}/.npm-packages"
+
+- name: NPM - Set global packages directory
+  become_user: "{{ansible_env.SUDO_USER}}"
+  shell: npm config set prefix "/home/{{ansible_env.SUDO_USER}}/.npm-packages"
+
+- name: NPM - Define NPM_PACKAGE in .zshrc
+  become_user: "{{ansible_env.SUDO_USER}}"
+  lineinfile:
+    dest: "/home/{{ansible_env.SUDO_USER}}/.zshrc"
+    line: NPM_PACKAGES="${HOME}/.npm-packages"
+    owner: "{{ansible_env.SUDO_USER}}"
+
+- name: NPM - Add NPM_PACKAGE to .zshrc
+  become_user: "{{ansible_env.SUDO_USER}}"
+  lineinfile:
+    dest: "/home/{{ansible_env.SUDO_USER}}/.zshrc"
+    line: export PATH="$PATH:$NPM_PACKAGES/bin"
+    owner: "{{ansible_env.SUDO_USER}}"
+
+- name: NPM - Add NPM MANPATH to .zshrc
+  become_user: "{{ansible_env.SUDO_USER}}"
+  lineinfile:
+    dest: "/home/{{ansible_env.SUDO_USER}}/.zshrc"
+    line: export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+    owner: "{{ansible_env.SUDO_USER}}"

@@ -13,7 +13,7 @@
 
 - name : DOCKER - Add GPG Docker Key
   become: true
-  shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg |  apt-key add -
+  shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
 - name: DOCKER - Add official repository
   become: true
