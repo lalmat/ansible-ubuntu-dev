@@ -1,0 +1,5 @@
+- name: INSOMNIA - Snap Install
+  become: true
+  snap:
+    name: insomnia
+    classic: yes
