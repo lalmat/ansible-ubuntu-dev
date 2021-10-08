@@ -11,6 +11,8 @@ This playbook install my prefered tools available under Ubuntu.
 - [Visual Studio Code](https://code.visualstudio.com/) - as main IDE
 - [Sublime Text](https://www.sublimetext.com/) - as secondary Editor
 - [BeeKeeper Studio](https://www.beekeeperstudio.io/) - A free & open source Database manager (supports PostgreSQL, MySQL, SQLite, SQL Server, MariaDB, Redshift, CockroachDB)
+- [Insomnia](https://insomnia.rest/) - Tools for testing REST requests
+
 ## Requirements
 
 You need to have theses packages already installed (use apt to install them) :
